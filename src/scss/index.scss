@@ -1,0 +1,147 @@
+@import "fonts.scss";
+$fontFamily: "Roboto Regular";
+$fontFamilyM: "Roboto Medium";
+$textTrsfrm: uppercase;
+$textMcolor: #333333;
+$maxW:  1170px;
+$mainRedColor: #386ef8;
+$padding_m: 10px 15px;
+$fSize: 16px;
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: $fontFamily;
+  font-size: $fSize;
+  color: #333333;
+  background: #808080;
+  height: 2000px;
+}
+
+.header{
+  width: 100%;
+  margin-top: 50px;
+  background: #fff;
+  .header__container{
+    width: $maxW;
+    margin: 0 auto;
+    padding: 16px 0px;
+    .logo{
+      display: inline-block;
+      padding: 9px 0px;
+
+    }
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.menu__container{
+  display: inline-block;
+  .menu-link__item{
+    display: inline-block;
+    padding: 5px;
+    margin: 0px 7px;
+    vertical-align: bottom;
+    a{
+      color: #333333;
+      font-family: $fontFamilyM;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+#pull{
+  display: none;
+}
+
+.login__container{
+  float: right;
+  margin: 5px 0px;
+  .login__status{
+    display: inline-block;
+    color: #333333;
+    font-family: $fontFamilyM;
+    letter-spacing: 1px;
+    .fa-info{
+      color: $mainRedColor;
+      border: 1px solid $mainRedColor;
+      padding: 1px 5px;
+      border-radius: 10px;
+      margin-left: 3px;
+    }
+    .text-login{
+      color: $mainRedColor;
+      margin: 0px 10px;
+    }
+    .image-login{
+      vertical-align: middle;
+      font-size: $fSize;
+      img{
+        vertical-align: middle;
+        margin: 0px 5px;
+      }
+    }
+  }
+  &:after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+
+
+/*============================================MQ===============================================*/
+@media screen and (max-width: 992px){
+  .header{
+    margin-top: 0px;
+    text-align: center;
+  }
+
+
+  #pull{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    color: $textMcolor;
+    margin: 20px;
+  }
+
+  #menu{
+    display: none;
+    text-align: center;
+  }
+
+  .header .header__container{
+    width: 100%;
+  }
+
+  .menu__container .menu-link__item{
+    display: block;
+    margin: 10px 0px;
+  }
+  .login__container{
+    float: none;
+  }
+}
+
+
+
+@media screen and (min-width: 993px){
+    #menu{
+      display: inline-block !important;
+    }
+}
+
+

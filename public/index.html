@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="header" id="myHeader">
+        <div class="header__container">
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt=""></a>
+            </div>
+            <a id="pull" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <ul id="menu" class="menu__container">
+                <li class="menu-link__item">
+                    <a href="#">Поиск</a>
+                </li>
+                <li class="menu-link__item">
+                    <a href="#">Мои переписки</a>
+                </li>
+                <li class="menu-link__item">
+                    <a href="#">Избранное</a>
+                </li>
+                <li class="menu-link__item">
+                    <a href="#">Кто смотрел</a>
+                </li>
+            </ul>
+            <div class="login__container">
+                <div class="login__status">
+                    <p class="login__status">Премиум <i class="fa fa-info" aria-hidden="true"></i></p>
+                    <p class="login__status text-login">100 кредитов</p>
+                    <div class="login__status image-login">
+                        <img src="img/men.png" alt=""><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script> 
+$(document).ready(function(){
+    $("#pull").click(function(){
+        $("#menu").slideToggle("slow");
+         if($(window.resize).width() >= 993){
+            $('#menu').removeAttr('style');
+        }
+        
+    });
+   
+});
+</script>
+</body>
+</html>
